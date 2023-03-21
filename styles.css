@@ -1,0 +1,647 @@
+/* Import Inter font */
+/* Import Lato font */
+/* Import League Spartan font */
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited{
+    color: inherit;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header > .burgerMenu {
+    margin-left: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nav styling */
+.nav-area {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 10vh;
+    gap: 70px;
+    padding-right: 40px;
+    background-color: #F9F4F5;
+    border-bottom: 1px solid black;
+}
+
+.navlink {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.navlink:hover {
+    color: #CC444B;
+    text-shadow: #1B1C22;
+    /* font-weight: 600; */
+    cursor: pointer;
+}
+
+.register {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #CC444B;
+    padding: 10px 28px;
+    padding-top: 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.register:hover {
+    background-color: #CC444B;
+    opacity: 0.8;
+}
+.burgerMenu {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* First Div 100vh */
+#jumbotron-div {
+    height: 50vh;
+    background-color: #F9F4F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center ;
+    background: url("assets/DSC_0026.JPG"); 
+    /* background: transparent; */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Black translucent overlay (optional) */
+.black-screen {
+    background-color: rgba(0, 0, 0, 0.527);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    top: 10vh;
+    z-index: 1;
+}
+
+#jumbotron-div > .logos-area-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    z-index: 2;
+}
+
+#jumbotron-div > .logos-area-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    z-index: 2;
+}
+
+#jumbotron-div > .logos-area-left > img {
+    max-width: 50%;
+    object-fit: contain;
+}
+#jumbotron-div > .logos-area-right > img {
+    max-width: 60%;
+    object-fit: contain;
+}
+
+#jumbotron-div > .jumbotron-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-left: 65px;
+    z-index: 2;
+    color: #F9F4F5;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: flex-start ;
+}
+
+#jumbotron-div > .jumbotron-text > h4 {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.highlight {
+    color: #CC444B;
+    font-weight: 600;
+}
+
+
+
+.button1{
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+/* Countdown div */
+#countdown-div {
+    height: 40vh;
+    background-color: #CC444B;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+#countdown-div > .countdown-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    min-width: 20%;
+    max-width: 20%;
+    padding-left: 40px;
+}
+
+#countdown-div > .countdown-text > #udaan_date {
+    font-family: "Lato", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.countdown-timer {
+    font-family: "Lato", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 70px;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.countdown-timer-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* About Udaan div */
+#about-udaan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+    height: 80vh;
+    background-color: #ffffff;
+    border-bottom: 1px solid black;
+}
+
+.about-left-side {
+    width: 60%;
+    /* align-self: flex-start;
+    margin-top: 5%; */
+}
+.about-left-side > h3 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+.about-left-side > .udaan-info {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.about-right-side{
+    width: 20%;
+}
+.about-right-side > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Stats div */
+#stats-div {
+    height: 30vh;
+    background-color: #F9F4F5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #000;
+    /* border-top: 1px solid #000; */
+}
+
+.stats-info {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    width: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-items {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#stats-div > .stats-items > .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#stats-div > .stats-items>  .stat > h1 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #CC444B;
+}
+
+#stats-div > .stats-items> .stat > h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1B1C22;
+}
+
+
+/* Register div */
+#register-div {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+
+#register-div > .registerImage {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#register-div > .registerImage > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#register-div > .prompt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#register-div > .prompt > h1 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #CC444B;
+}
+
+#register-div > .prompt > h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #1B1C22;
+}
+
+.registerButton {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #CC444B;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.registerButton:hover {
+    background-color: #CC444B;
+    opacity: 0.8;
+}
+
+.nav-area.active {
+    height: max-content;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #fff;
+    border: none;
+    padding-right: 0px;
+    gap: 0px;
+}
+
+.secretPhoneLogo{
+    display: none;
+}
+
+/* Phone Styling */
+@media only screen and (max-width: 480px) {
+    .nav-area {
+        display: none;
+    }
+    .navlink {
+        border-top: 1px solid black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+    }
+    .register {
+        border-top: 1px solid black;
+        background-color: transparent;
+        color: #CC444B;
+        border-radius: 0;
+        width: 100%;
+        padding-top: 0px;
+        padding: 20px 0px;
+        font-size: 1.2rem;
+    }
+    .register:hover {
+        background-color: #CC444B;
+        color: white;
+    }
+
+    .burgerMenu {
+        display: inline-block;
+    }
+    .black-screen {
+        display: none;
+    }
+
+    #jumbotron-div {
+        height: max-content;
+        background-color: #CC444B;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 0px;
+    }
+    .secretPhoneLogo{
+        display: inline-block;
+    }
+
+    .logos-area-left {
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 5%;
+    }
+    .logos-area-left > img {
+        width: 30%;
+    }
+    .logos-area-right > img {
+        display: none;
+    }
+
+    #jumbotron-div > .jumbotron-text {
+        min-width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0px;
+        margin: 10px 15%;
+        line-height: normal;
+    }
+
+    #jumbotron-div > .jumbotron-text > h1 {
+        font-family: "League Spartan", sans-serif;
+        font-size: 2.7rem;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    #jumbotron-div > .jumbotron-text > h4 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #fff;
+        margin:0px 15px;
+    }
+
+    #countdown-div {
+        height: max-content;
+        /* background-color: #F9F4F5; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0px;
+    }
+    #countdown-div > .countdown-text {
+        min-width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0px;
+        margin: 10px 10%;
+        line-height: normal;
+        padding-left: 0px;
+    }
+    .countdown-timer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+        margin: 0px 15px;
+        flex-wrap: wrap;
+    }
+    #about-udaan {
+        height: max-content;
+        background-color: #F9F4F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0px;
+    }
+    .about-left-side {
+        min-width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0px;
+        margin: 10px 10%;
+        line-height: normal;
+        padding-left: 0px;
+    }
+    .about-right-side {
+        width: 85%
+    }
+    #stats-div {
+        /* width: 85%; */
+        height: max-content;
+        background-color: #F9F4F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0px;
+    }
+
+    .stats-info {
+        min-width: 85%;
+    }
+    .stats-items {
+        min-width: 85%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+        margin-left: 0px;
+        margin: 10px 10%;
+        line-height: normal;
+        padding-left: 0px;
+    }
+    #stats-div > .stats-items>  .stat > h1 {
+        font-family: "League Spartan", sans-serif;
+        font-size: 2.7rem;
+        font-weight: 500;
+        color: #CC444B;
+    }
+    #stats-div > .stats-items> .stat > h4 {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: #1B1C22;
+    }
+    #register-div {
+        height: max-content;
+        background-color: #F9F4F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0px;
+    }
+    #register-div > .registerImage {
+        width: 80%;
+    }
+    #register-div > .prompt {
+        width: 80%;
+    }
+    #register-div > .prompt > h1 {
+        font-size: 2.2rem;
+        color: #CC444B;
+    }
+    #register-div > .prompt > h4 {
+        font-size: 1.1rem;
+        color: #1B1C22;
+    }
+}

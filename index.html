@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaan Sandbox</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+    <!-- Burger menu (hidden by default) -->
+    <div class="burgerMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Desktop navbar -->
+    <div class="nav-area">
+        <div class="navlink"><a href="#">Home</a></div>
+        <div class="navlink"><a href="#about-udaan">About Udaan</a></div>
+        <div class="navlink">Event Gallery</div>
+        <div class="register"><a href="#register-div">REGISTER</a></div>
+    </div>
+    </header>
+    
+
+    <div id="jumbotron-div">
+        <!-- <div class="black-screen"></div> -->
+        <div class="logos-area-left">
+            <!-- Idhar NSS ke jagah pe Udaan ka logo daaldena -->
+            <img src="assets/nss_logo.png" alt="Udaan Logo">
+            <img src="assets/white wing.png" alt="whitewing" class="secretPhoneLogo">
+        </div>
+
+        <div class="jumbotron-text">
+            <h1>UDAAN 2023</h1>
+            <h4>RUN FOR A CAUSE: <text class="highlight">Navi Mumbai's Biggest Marathon for charity</text>, organized by D.Y. Patil University, Nerul</h4>
+        </div>
+        <div class="logos-area-right">
+            <img src="assets/white wing.png" alt="Social Wing Logo">
+        </div>
+        <!-- <a href="#stats-div"><button class="button1">Next Div</button></a> -->
+    </div>
+    
+
+
+    <!-- Countdown Div -->
+
+    <div id="countdown-div">
+        <div class="countdown-text">
+            <h4>UDAAN 2023</h4>
+            <h5 id="udaan_date">2 April 2023</h5>
+        </div>
+        <div class="countdown-timer">
+            <div class="countdown-timer-box">
+                <h1 id="days">00</h1>
+                <h4>Days</h4>
+            </div>
+            <div class="countdown-timer-box">
+                <h1 id="hours">00</h1>
+                <h4>Hours</h4>
+            </div>
+            <div class="countdown-timer-box">
+                <h1 id="minutes">00</h1>
+                <h4>Minutes</h4>
+            </div>
+            <div class="countdown-timer-box">
+                <h1 id="seconds">00</h1>
+                <h4>Seconds</h4>
+            </div>
+        </div>
+        <!-- <a href="#stats-div"><button class="button1">Next Div</button></a> -->
+        </div>  
+
+        <!-- End of countdown div -->
+
+    <!-- About Udaan Div -->
+    <div id="about-udaan">
+        <div class="about-left-side">
+            <h3>What is Udaan?</h3>
+            <text class="udaan-info">Udaan is Navi Mumbai's largest marathon for charity, organized by <b>Social Wing - RAIT</b>, which is a part of D.Y. Patil University, Nerul. Every year more than 100 people participate in this marathon that supports EIC se likhwa le Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reiciendis nihil quo dignissimos provident mollitia corrupti! Non, nisi. Laudantium, nisi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, voluptatem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime laborum perferendis ab, dolorem exercitationem vitae laboriosam sapiente nulla vel natus!</text>
+        </div>
+        <div class="about-right-side">
+            <img src="assets/IMG_1399.JPG" alt="kid sitting udaan">
+        </div>
+    </div>
+
+
+    <!-- Stats Div -->
+    <div id="stats-div">
+        <!-- stats daaldena apne hissab se -->
+        <div class="stats-info">YOUR IMPACT</div>
+        <div class="stats-items">
+            <div class="stat" id="totalPeople">
+                <h1>0</h1>
+                <h4>Runners</h4>
+            </div>
+            <div class="stat" id="kmTravelled">
+                <h1>0</h1>
+                <h4>Kilometers</h4>
+            </div>
+            <div class="stat" id="studentsTaught">
+                <h1>0</h1>
+                <h4>Students</h4>
+            </div>
+            <div class="stat" id="villagesAdopted">
+                <h1>0</h1>
+                <h4>Village adopted</h4>
+            </div>
+        </div>
+        <!-- trees planted bhi daal sakte hai -->
+            
+            <!-- <a href="#register-div"><button class="button1">Next Div</button></a> -->
+    </div>
+
+    <!-- Sponsors Div???? 100vh only 
+    1 1 1
+     2 2
+    3 3 3
+    -->
+
+    <div id="register-div">
+        <div class="registerImage">
+            <!-- idhar koi graphic/udaan ka image daaldena -->
+            <img src="assets/hands.jpg" alt="register prompt artwork">
+        </div>
+        <div class="prompt">
+         <h1>Give flight to someone's dreams. <br>Register Now</h1>
+         <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla porro ullam laborum quia quo repellendus ea sunt nam architecto magni, neque iste culpa deleniti laboriosam minima ratione quibusdam doloremque quaerat.</h4>
+        <button class="registerButton">REGISTER NOW</button>
+        </div>
+    </div>
+
+    <!-- Footer ?? -->
+
+<!-- Burger Menu Script -->
+<script>
+    const burgerMenu = document.querySelector('.burgerMenu');
+    const navbar = document.querySelector('.nav-area');
+
+    burgerMenu.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+    });
+</script>
+
+<!-- Script for countdown -->
+<script>
+    var countDownDate = new Date("Apr 2, 2023 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("days").innerHTML = days.toString();
+            document.getElementById("hours").innerHTML = hours.toString();
+            document.getElementById("minutes").innerHTML = minutes.toString();
+            document.getElementById("seconds").innerHTML = seconds.toString();
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+
+
+        }, 1000);
+</script>
+
+
+</body>
+</html>
